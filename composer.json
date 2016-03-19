@@ -1,10 +1,15 @@
 {
-    "name": "zanphp/zanhttpdemo",
+    "name": "zanphp/tcpdemo",
     "repositories": [
         {
             "type": "git",
             "url": "git@gitlab.qima-inc.com:php-lib/zan.git"
         },
+        {
+            "type": "git",
+            "url": "git@gitlab.qima-inc.com:php-lib/nova-asnyc.git"
+        },
+
         {
             "type": "git",
             "url": "http://git.qima-inc.com/php-3rd-lib/qiniu-php-sdk.git"
@@ -26,18 +31,18 @@
         }
     ],
     "require": {
-        "zanphp/zan": "dev-dev"
+        "zanphp/zan": "dev-dev",
+        "zanphp/nova": "dev-dev"
     },
     "autoload": {
         "psr-4": {
-            "Com\\Youzan\\ZanHttpDemo\\": "src",
-            "Com\\Youzan\\ZanHttpDemoInit\\": "init"
+            "Com\\Youzan\\TcpDemo\\": "src",
+            "Com\\Youzan\\TcpDemoInit\\": "init"
         },
         "classmap": []
     },
     "autoload-dev": {
         "classmap": [
-            "tests/TestCase.php"
         ]
     },
     "require-dev": {
