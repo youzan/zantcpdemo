@@ -41,6 +41,7 @@
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
+            "Com\\Youzan\\TcpDemo\\Tests\\": "tests",
             "Com\\Youzan\\TcpDemoInit\\": "init"
         },
         "classmap": []
