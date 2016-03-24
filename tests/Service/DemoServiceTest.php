@@ -16,7 +16,7 @@ class DemoServiceTest extends TaskTest {
     public function taskEchoBackWork()
     {
         $service = new DemoService();
-        $result = $service->echoBack('hello');
+        $result = (yield $service->echoBack('hello'));
 
         $this->assertEquals('hello', $result, 'DemoService.echoBack rpc call failed');
     }
