@@ -9,8 +9,8 @@
 namespace Com\Youzan\Tcpdemo\Tests\Service;
 
 
-use Com\Youzan\Tcpdemo\Service\DemoService;
-use Zan\Framework\Test\Network\Http\Routing\TaskTest;
+use Com\Youzan\NovaTcpDemo\Service\DemoService;
+use Zan\Framework\Testing\TaskTest;
 
 class DemoServiceTest extends TaskTest {
     public function taskEchoBackWork()
@@ -18,6 +18,6 @@ class DemoServiceTest extends TaskTest {
         $service = new DemoService();
         $result = $service->echoBack('hello');
 
-        $this->assertEquals('hello', $result, 'xxxx');
+        $this->assertEquals('hello', $result, 'DemoService.echoBack rpc call failed');
     }
 }

@@ -13,3 +13,9 @@
 */
 
 require __DIR__.'/../vendor/autoload.php';
+
+
+$appName = 'TcpDemoTest';
+$rootPath = realpath(__DIR__.'/../');
+
+$app = new \Zan\Framework\Foundation\Application($appName, $rootPath);
