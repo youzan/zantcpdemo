@@ -9,6 +9,7 @@
 namespace Com\Youzan\Tcpdemo\Tests\Service;
 
 
+use Com\Youzan\NovaTcpDemo\Entity\Demo;
 use Com\Youzan\NovaTcpDemo\Service\DemoService;
 use Zan\Framework\Testing\TaskTest;
 
@@ -19,5 +20,14 @@ class DemoServiceTest extends TaskTest {
         $result = (yield $service->echoBack('hello'));
 
         $this->assertEquals('hello', $result, 'DemoService.echoBack rpc call failed');
+    }
+
+    public function taskHelloWork()
+    {
+        $service = new DemoService();
+        $result = (yield $service->hello('demo'));
+        
+        $this->assertTrue(is_a($result,Demo::class,'DemoService.hello return invalid demo entity'));
+        $this->assertEquals('demo',$result->name, 'DemoService.hello return demo.name failed');
     }
 }
