@@ -11,13 +11,27 @@ namespace Com\Youzan\Tcpdemo\Tests\Service;
 
 use Com\Youzan\NovaTcpDemo\Entity\Demo;
 use Com\Youzan\NovaTcpDemo\Service\DemoService;
+use Zan\Framework\Foundation\Core\Config;
+use Zan\Framework\Network\Connection\ConnectionInitiator;
 use Zan\Framework\Testing\TaskTest;
 
 class DemoServiceTest extends TaskTest {
+    public function initTask()
+    {
+        ConnectionInitiator::getInstance()->init(Config::get('connection'));
+        return parent::initTask();
+    }
+
     public function taskEchoBackWork()
     {
         $service = new DemoService();
         $result = (yield $service->echoBack('hello'));
+        $result = (yield $service->echoBack($result));
+        $result = (yield $service->echoBack($result));
+        $result = (yield $service->echoBack($result));
+        $result = (yield $service->echoBack($result));
+        $result = (yield $service->echoBack($result));
+        $result = (yield $service->echoBack($result));
 
         $this->assertEquals('hello', $result, 'DemoService.echoBack rpc call failed');
     }
