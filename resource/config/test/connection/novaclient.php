@@ -6,16 +6,16 @@
  * Time: 下午4:53
  */
 return [
-    'Demo' => [
+    'nova.demo' => [
         'engine'=> 'novaClient',
         'pool'  => [
-            'pool_name' => 'com.youzan.novaTcpDemo.service.DemoService',
-            'keeping-sleep-time' => '10000',
-            'init-connection'=> '1',
+            'pool_name' => 'nova.demo',
+            'keeping-sleep-time' => 10000,
+            'init-connection'=> 1,
             'host' => '127.0.0.1',
             'port' => '8020',
             'timeout' => 5000,
-            'persistent' => false,
+            'persistent' => true,
             'config'    => [
                 'open_length_check' => 1,
                 'package_length_type' => 'N',
