@@ -6,10 +6,10 @@
  * Time: 下午4:53
  */
 return [
-    'nova.demo' => [
+    'nova.pfapi' => [
         'engine'=> 'novaClient',
         'pool'  => [
-            'pool_name' => 'nova.demo',
+            'pool_name' => 'nova.pfapi',
             'keeping-sleep-time' => 10000,
             'init-connection'=> 1,
             'host' => '127.0.0.1',
