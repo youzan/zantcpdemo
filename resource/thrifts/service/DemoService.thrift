@@ -3,7 +3,7 @@ namespace * com.youzan.novaTcpDemo.service
 include '../entity/Demo.thrift'
 
 exception NovaTcpDemoException {
-1: string what
+1: string message
 
 }
 

@@ -39,7 +39,7 @@ class DemoService implements DemoInterface{
 
     public function testException()
     {
-        throw new NovaTcpDemoException();
+        throw new NovaTcpDemoException('Nova Tcp Demo Exception');
         yield 'abc';
     }
 }

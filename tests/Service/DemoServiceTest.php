@@ -60,4 +60,17 @@ class DemoServiceTest extends TaskTest {
 
         $this->assertNull($result, 'DemoServer::returnNullResult failed');
     }
+
+    public function taskTestException()
+    {
+        $exceptionMsg = '';
+
+        try {
+            $service = new DemoService();
+            $result = (yield $service->testException());
+        } catch (\Exception $e) {
+            $exceptionMsg = $e->getMessage();
+        }
+        $this->assertEquals('Nova Tcp Demo Exception', $exceptionMsg, 'DemoServer::taskTestException failed');
+    }
 }
