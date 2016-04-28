@@ -9,5 +9,13 @@
 return [
     'host'          => '127.0.0.1',
     'port'          => '8020',
-    'worker_num'    => 2,
+    'config' => [
+        'worker_num'    => 4,
+    ],
+    'monitor' =>[
+        'live_time' => 1800000,         //30m
+        'check_time' => 1000,           //1s
+        'memory_limit' => 1610612736,   //1.5G
+        'cpu_limit' => 70,
+    ]
 ];
