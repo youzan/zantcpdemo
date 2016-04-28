@@ -26,7 +26,7 @@
         }
     ],
     "require": {
-        "zanphp/zan": "dev-feature/worker_monitor",
+        "zanphp/zan": "dev-dev",
         "zanphp/novatcpdemo": "dev-dev",
         "elasticsearch/yz-elasticsearch-client": "dev-master",
         "zanphp/nova": "dev-dev"
