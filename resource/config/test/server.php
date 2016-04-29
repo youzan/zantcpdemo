@@ -9,13 +9,14 @@
 return [
     'host'          => '127.0.0.1',
     'port'          => '8020',
-//    'config' => [
-        'worker_num'    => 4,
-//    ],
-//    'monitor' =>[
-//        'live_time' => 1800000,         //30m
-//        'check_time' => 1000,           //1s
-//        'memory_limit' => 1610612736,   //1.5G
-//        'cpu_limit' => 70,
-//    ]
+    'config' => [
+        'worker_num'    => 2,
+    ],
+    'monitor' =>[
+        'max_request'   => 100000,          //
+        'max_live_time' => 1800000,         //30m
+        'check_interval'=> 1000,           //1s
+        'memory_limit'  => 1.5 * 1024 * 1024 * 1024,       //1.50G
+        'cpu_limit'     => 70,
+    ]
 ];
