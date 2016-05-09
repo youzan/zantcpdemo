@@ -13,12 +13,13 @@ use Com\Youzan\NovaTcpDemo\Entity\Demo;
 use Com\Youzan\NovaTcpDemo\Service\DemoService;
 use Zan\Framework\Foundation\Core\Config;
 use Zan\Framework\Network\Connection\ConnectionInitiator;
+use Zan\Framework\Store\Facade\KV;
 use Zan\Framework\Testing\TaskTest;
 
 class DemoServiceTest extends TaskTest {
     public function initTask()
     {
-        ConnectionInitiator::getInstance()->init(Config::get('connection'));
+        ConnectionInitiator::getInstance()->init(Config::get('connection'), null);
         return parent::initTask();
     }
 
@@ -49,7 +50,7 @@ class DemoServiceTest extends TaskTest {
     {
         $service = new DemoService();
         $result = (yield $service->returnEmptyArray());
-        
+
         $this->assertEquals([], $result, 'DemoServer::returnEmptyArray failed');
     }
 
@@ -72,5 +73,24 @@ class DemoServiceTest extends TaskTest {
             $exceptionMsg = $e->getMessage();
         }
         $this->assertEquals('Nova Tcp Demo Exception', $exceptionMsg, 'DemoServer::taskTestException failed');
+    }
+
+    public function taskTestKV()
+    {
+        $kv = KV::getInstance('test.shiweiset3');
+        $res = (yield $kv->set('test_string', 'ssdfsd'));
+        $this->assertTrue($res, 'KV set failed');
+        $res = (yield $kv->get('test_string'));
+        $this->assertEquals('ssdfsd', $res, 'KV get1 failed');
+        $res = (yield $kv->remove('test_string'));
+        $this->assertTrue($res, 'KV remove failed');
+        $res = (yield $kv->get('test_string'));
+        $this->assertNull($res, 'KV get2 failed');
+        $list = ["sdf", 1, ['sdf', 'fds']];
+        $res = (yield $kv->setList('test_string', $list));
+        var_dump('setList:', $res);
+        $res = (yield $kv->get('test_string'));
+        var_dump('getList:', $res);
+
     }
 }
