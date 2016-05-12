@@ -9,10 +9,18 @@
 namespace Com\Youzan\TcpDemo\Tests\Dao;
 
 
-class DemoDaoStub
+use Com\Youzan\TcpDemo\Dao\DemoDao;
+use Zan\Framework\Testing\Stub;
+
+class DemoDaoStub extends Stub
 {
+    protected $realClassName = DemoDao::class;
+    
     public function selectById($id)
     {
-        
+        yield [
+            'id'    => $id,
+            'name'  => 'demoStub',
+        ];
     }
 }

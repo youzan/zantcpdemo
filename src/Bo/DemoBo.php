@@ -23,4 +23,9 @@ class DemoBo
     {
         $this->dao = Di::make(DemoDao::class); 
     }
+    
+    public function getById($id)
+    {
+        yield $this->dao->selectById($id);
+    }
 }
