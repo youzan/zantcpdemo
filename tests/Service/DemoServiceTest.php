@@ -19,7 +19,7 @@ use Zan\Framework\Testing\TaskTest;
 class DemoServiceTest extends TaskTest {
     public function initTask()
     {
-        ConnectionInitiator::getInstance()->init(Config::get('connection'), null);
+        ConnectionInitiator::getInstance()->init('connection', null);
         return parent::initTask();
     }
 
@@ -86,11 +86,11 @@ class DemoServiceTest extends TaskTest {
         $this->assertTrue($res, 'KV remove failed');
         $res = (yield $kv->get('test_string'));
         $this->assertNull($res, 'KV get2 failed');
+//        $this->assertNull('123123', 'KV get2 failed');
         $list = ["sdf", 1, ['sdf', 'fds']];
         $res = (yield $kv->setList('test_string', $list));
         var_dump('setList:', $res);
         $res = (yield $kv->get('test_string'));
         var_dump('getList:', $res);
-
     }
 }
