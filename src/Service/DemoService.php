@@ -15,6 +15,7 @@ use Com\Youzan\NovaTcpDemo\Service\NovaTcpDemoException;
 class DemoService implements DemoInterface{
     public function echoBack($name)
     {
+        yield taskSleep(40);
         yield $name;
     }
 
