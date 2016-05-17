@@ -7,7 +7,7 @@
  */
 
 return [
-    'test' => [
+    'default' => [
         'engine'=> 'kVStore',
         'ip_list' => '192.168.66.202:3000',
         'user' => '',

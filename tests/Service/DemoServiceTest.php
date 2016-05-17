@@ -77,20 +77,18 @@ class DemoServiceTest extends TaskTest {
 
     public function taskTestKV()
     {
-        $kv = KV::getInstance('test.shiweiset3');
-        $res = (yield $kv->set('test_string', 'ssdfsd'));
+        $res = (yield KV::set('test.test.test', 'test_string', 'ssdfsd'));
         $this->assertTrue($res, 'KV set failed');
-        $res = (yield $kv->get('test_string'));
+        $res = (yield KV::get('test.test.test', 'test_string'));
         $this->assertEquals('ssdfsd', $res, 'KV get1 failed');
-        $res = (yield $kv->remove('test_string'));
+        $res = (yield KV::remove('test.test.test', 'test_string'));
         $this->assertTrue($res, 'KV remove failed');
-        $res = (yield $kv->get('test_string'));
+        $res = (yield KV::get('test.test.test', 'test_string'));
         $this->assertNull($res, 'KV get2 failed');
-//        $this->assertNull('123123', 'KV get2 failed');
         $list = ["sdf", 1, ['sdf', 'fds']];
-        $res = (yield $kv->setList('test_string', $list));
+        $res = (yield KV::setList('test.test.test', 'test_string', $list));
         var_dump('setList:', $res);
-        $res = (yield $kv->get('test_string'));
+        $res = (yield KV::get('test.test.test', 'test_string'));
         var_dump('getList:', $res);
     }
 }

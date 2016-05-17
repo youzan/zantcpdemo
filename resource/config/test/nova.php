@@ -19,14 +19,10 @@ return [
     ],
 
     'platform' => [
-        'module' => '',
         'enable_register' => 0,
         'haunt_url' => 'http://192.168.66.237:8687',
         'enable_report' => 0,
         'hawk_url' => 'http://192.168.66.240:8188',
         'report_interval' => 300
     ],
-
-
-
 ];

@@ -19,5 +19,6 @@ return [
         'memory_limit'  => 1.5 * 1024 * 1024 * 1024,       //1.50G
         'cpu_limit'     => 70,
         'debug'         => false
-    ]
+    ],
+    'request_timeout' => 30000,
 ];
