@@ -24,8 +24,8 @@ class DemoBoTest extends TaskTest
         $demoBo = new DemoBo();
         $demo = (yield $demoBo->getById(1));
 
-        $this->assertArrayHasKey('id', 'DemoDaoStub faild');
-        $this->assertArrayHasKey('name', 'DemoDaoStub faild');
+        $this->assertArrayHasKey('id', $demo, 'DemoDaoStub faild');
+        $this->assertArrayHasKey('name', $demo,  'DemoDaoStub faild');
         
         $this->assertEquals('demoStub', $demo['name'], 'DemoDaoStub faild');
         $this->assertEquals(1, $demo['id'], 'DemoDaoStub faild');
