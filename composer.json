@@ -15,6 +15,10 @@
         },
         {
             "type": "git",
+            "url": "git@gitlab.qima-inc.com:php-3rd-lib/symfony-console.git"
+        },
+        {
+            "type": "git",
             "url": "http://git.qima-inc.com/php-3rd-lib/qiniu-php-sdk.git"
         },
         {
