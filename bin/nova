@@ -1,18 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-$cmd = 'start';
+$app = require_once __DIR__.'/../init/app.php';
 
-switch ($cmd) {
-    case 'start':
-
-        $app = require_once __DIR__.'/../init/app.php';
-
-        $server = $app->createTcpServer();
-        $server->start();
-
-        break;
-    case 'stop':
-        break;
-}
+$server = $app->createTcpServer();
+$server->start();
 
