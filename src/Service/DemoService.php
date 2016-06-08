@@ -12,6 +12,7 @@ use Com\Youzan\NovaTcpDemo\Interfaces\DemoService as DemoInterface;
 use Com\Youzan\NovaTcpDemo\Entity\Demo;
 use Com\Youzan\NovaTcpDemo\Service\NovaTcpDemoException;
 use Com\Youzan\Shop\Api\Info\Service\ShopInfoService;
+use Zan\Framework\Store\Facade\Db;
 use Zan\Framework\Store\Facade\KV;
 
 class DemoService implements DemoInterface{
@@ -22,6 +23,8 @@ class DemoService implements DemoInterface{
 //        $service = new ShopInfoService();
 //        yield $service->selectByNo(20160101);
         //yield taskSleep(20);
+        $res = (yield Db::execute('market.category.row_by_id', ['var'=>['relation_id'=>5]]));
+        var_dump($res);
         yield $name;
     }
 
