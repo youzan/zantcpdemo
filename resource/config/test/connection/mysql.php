@@ -17,7 +17,7 @@ return [
             'maximum-connection-count' => 50,
             'minimum-connection-count' => 10,
             'heartbeat-time' => 35000,
-            'init-connection'=> 2,
+            'init-connection'=> 0,
         ],
     ],
 

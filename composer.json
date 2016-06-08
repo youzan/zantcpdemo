@@ -15,6 +15,10 @@
         },
         {
             "type": "git",
+            "url": "http://gitlab.qima-inc.com/chiyou/shoptcpdemo.git"
+        },
+        {
+            "type": "git",
             "url": "git@gitlab.qima-inc.com:php-3rd-lib/symfony-console.git"
         },
         {
@@ -24,6 +28,10 @@
         {
             "type": "git",
             "url": "http://git.qima-inc.com/php-3rd-lib/league-climate.git"
+        },
+        {
+            "type": "git",
+            "url": "http://gitlab.qima-inc.com/php-lib/nsq-async.git"
         },
         {
             "type": "git",
@@ -42,7 +50,9 @@
         }
     ],
     "require": {
-        "zanphp/zan": "dev-dev",
+        "php-lib/nsq-async": "dev-master",
+        "zanphp/zan": "dev-master",
+        "zanphp/shoptcpdemo": "dev-master",
         "zanphp/novatcpdemo": "dev-dev",
         "elasticsearch/yz-elasticsearch-client": "dev-master",
         "zanphp/nova": "dev-dev"

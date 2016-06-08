@@ -4,7 +4,7 @@ include '../entity/Demo.thrift'
 
 exception NovaTcpDemoException {
 1: string message
-
+2: i32 code
 }
 
 service DemoService {

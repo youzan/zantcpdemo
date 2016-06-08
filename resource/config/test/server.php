@@ -12,7 +12,6 @@ return [
     'config' => [
         'worker_num'    => 2,
     ],
-    'request_timeout'   => 50,
     'monitor' =>[
         'max_request'   => 100000,          //
         'max_live_time' => 1800000,         //30m
