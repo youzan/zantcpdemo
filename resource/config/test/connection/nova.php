@@ -7,24 +7,16 @@
  */
 
 return [
-    'pfapi' => [
-        'engine'=> 'novaClient',
-        'host' => '127.0.0.1',
-        'port' => '8020',
-//        'host' => '192.168.66.237',
-//        'port' => '10002',
-        'timeout' => 5000,
-        'persistent' => true,
-        'config'    => [
-            'open_length_check' => 1,
-            'package_length_type' => 'N',
-            'package_length_offset' => 0,
-            'package_body_offset' => 0,
-            'open_nova_protocol' => 1
-        ],
-        'pool'  => [
-            'keeping-sleep-time' => 10000,
-            'init-connection'=> 0,
-        ],
+    'engine'=> 'novaClient',
+    'timeout' => 5000,
+    'persistent' => true,
+    'heartbeat-time' => 30000,
+    'load_balancing_strategy' => 'polling',
+    'config'    => [
+        'open_length_check' => 1,
+        'package_length_type' => 'N',
+        'package_length_offset' => 0,
+        'package_body_offset' => 0,
+        'open_nova_protocol' => 1
     ],
 ];
