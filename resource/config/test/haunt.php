@@ -6,7 +6,7 @@
  * Time: 下午4:03
  */
 return [
-    'modules' => [
+    'app_names' => [
         'TcpDemo'
     ],
     'discovery' => [
