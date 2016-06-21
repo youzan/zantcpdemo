@@ -50,11 +50,9 @@
         }
     ],
     "require": {
-        "php-lib/nsq-async": "dev-master",
         "zanphp/zan": "dev-master",
         "zanphp/shoptcpdemo": "dev-master",
         "zanphp/novatcpdemo": "dev-dev",
-        "elasticsearch/yz-elasticsearch-client": "dev-master",
         "zanphp/nova": "dev-dev"
     },
     "autoload": {
