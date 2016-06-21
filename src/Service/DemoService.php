@@ -22,8 +22,8 @@ class DemoService implements DemoInterface{
         //throw new NovaTcpDemoException('Nova Tcp Demo Exception', 11111);
 //        $service = new ShopInfoService();
 //        yield $service->selectByNo(20160101);
-        //yield taskSleep(20);
-        $res = (yield Db::execute('market.category.row_by_id', ['var'=>['relation_id'=>5]]));
+        yield taskSleep(20);
+//        $res = (yield Db::execute('market.category.row_by_id', ['var'=>['relation_id'=>5]]));
         yield $name;
     }
 
