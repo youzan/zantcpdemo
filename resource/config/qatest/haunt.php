@@ -10,7 +10,7 @@ return [
         'TcpDemo'
     ],
     'discovery' => [
-        'host' => 'etcd0-qa.s.qima-inc.com',
+        'host' => '192.168.66.237',
         'port' => 2379,
         'timeout' => 35000,
         'uri' => '/v2/keys',
@@ -19,7 +19,7 @@ return [
         'loop_time' => 1000,
     ],
     'watch' => [
-        'host' => 'etcd0-qa.s.qima-inc.com',
+        'host' => '192.168.66.237',
         'port' => 2379,
         'timeout' => 30000,
         'uri' => '/v2/keys',
@@ -31,7 +31,7 @@ return [
         'loop_time' => 1000,
     ],
     'register' => [
-        'host' => '127.0.0.1',
+        'host' => '192.168.66.237',
         'port' => 8687,
         'uri' => '/register',
         'timeout' => 10000,
