@@ -11,6 +11,15 @@ return [
     'port'          => '8020',
     'config' => [
         'worker_num'    => 2,
+        'dispatch_mode' => 3,
+        'max_request' => 100000,
+        'reactor_num' => 1,
+        'open_length_check' => 1,
+        'package_length_type' => 'N',
+        'package_length_offset' => 0,
+        'package_body_offset' => 0,
+        'open_nova_protocol' => 1,
+        'package_max_length' => 200000
     ],
     'monitor' =>[
         'max_request'   => 100000,          //
