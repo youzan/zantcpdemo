@@ -10,7 +10,7 @@ return [
         'TcpDemo'
     ],
     'discovery' => [
-        'host' => 'http://etcd0-qa.s.qima-inc.com',
+        'host' => 'etcd0-qa.s.qima-inc.com',
         'port' => 2379,
         'timeout' => 35000,
         'uri' => '/v2/keys',
@@ -19,7 +19,7 @@ return [
         'loop_time' => 1000,
     ],
     'watch' => [
-        'host' => 'http://etcd0-qa.s.qima-inc.com',
+        'host' => 'etcd0-qa.s.qima-inc.com',
         'port' => 2379,
         'timeout' => 30000,
         'uri' => '/v2/keys',
