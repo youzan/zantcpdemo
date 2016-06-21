@@ -10,10 +10,10 @@ return [
     'host'          => '0.0.0.0',
     'port'          => '8020',
     'config' => [
-        'worker_num'    => 2,
+        'worker_num'    => 4,
         'dispatch_mode' => 3,
         'max_request' => 100000,
-        'reactor_num' => 1,
+        'reactor_num' => 2,
         'open_length_check' => 1,
         'package_length_type' => 'N',
         'package_length_offset' => 0,
