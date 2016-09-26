@@ -23,11 +23,11 @@
         },
         {
             "type": "git",
-            "url": "http://git.qima-inc.com/php-3rd-lib/qiniu-php-sdk.git"
+            "url": "http://gitlab.qima-inc.com/php-3rd-lib/qiniu-php-sdk.git"
         },
         {
             "type": "git",
-            "url": "http://git.qima-inc.com/php-3rd-lib/league-climate.git"
+            "url": "http://gitlab.qima-inc.com/php-3rd-lib/league-climate.git"
         },
         {
             "type": "git",
@@ -35,7 +35,7 @@
         },
         {
             "type": "git",
-            "url": "http://git.qima-inc.com/php-3rd-lib/seld-cli-prompt.git"
+            "url": "http://gitlab.qima-inc.com/php-3rd-lib/seld-cli-prompt.git"
         },
         {
             "type": "git",

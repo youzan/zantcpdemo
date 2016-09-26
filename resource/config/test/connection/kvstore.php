@@ -1,15 +1,18 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: heize
- * Date: 16/4/5
- * Time: 下午4:53
+ * User: caichengxiang
+ * Date: 16/9/3
+ * Time: 下午2:28
  */
 
 return [
     'default' => [
-        'engine'=> 'kVStore',
-        'ip_list' => '192.168.66.202:3000',
+        'engine'=> 'KvStore',
+        //ip列表，将会对每一个建立链接
+        'ip_list' => [
+            '10.9.12.205:3000',
+        ],
         'user' => '',
         'password' => '',
         'policy' => [
