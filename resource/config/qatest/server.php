@@ -10,8 +10,8 @@ return [
     'host'          => '0.0.0.0',
     'port'          => '8020',
     'config' => [
-        'worker_num'    => 4,
-        'dispatch_mode' => 3,
+        'daemonize' => 0,
+        'worker_num' => 2,
         'max_request' => 100000,
         'reactor_num' => 2,
         'open_length_check' => 1,
@@ -19,15 +19,19 @@ return [
         'package_length_offset' => 0,
         'package_body_offset' => 0,
         'open_nova_protocol' => 1,
-        'package_max_length' => 200000
+        'package_max_length' => 2000000
     ],
     'monitor' =>[
-        'max_request'   => 100000,          //
+        'max_request'   => 100000,            //
         'max_live_time' => 1800000,         //30m
         'check_interval'=> 10000,           //1s
         'memory_limit'  => 1.5 * 1024 * 1024 * 1024,       //1.50G
         'cpu_limit'     => 70,
         'debug'         => false
     ],
-    'request_timeout' => 30000,
+    'hawk_collection' => [
+        'enable_hawk' => 0,
+        'collect_listen_host' => '127.0.0.1',
+        'collect_listen_port' => 8181
+    ],
 ];
