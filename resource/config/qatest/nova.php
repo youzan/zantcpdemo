@@ -19,10 +19,7 @@ return [
     ],
 
     'platform' => [
-        'enable_register' => 0,
-        'haunt_url' => 'http://192.168.66.237:8687',
-        'enable_report' => 0,
-        'hawk_url' => 'http://192.168.66.240:8188',
-        'report_interval' => 300
+        'collect_listen_host' => '127.0.0.1',
+        'collect_listen_port' => 8181
     ],
 ];
