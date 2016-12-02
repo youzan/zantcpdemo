@@ -11,7 +11,7 @@ return [
     'port'          => '8020',
     'config' => [
         'daemonize' => 0,
-        'worker_num' => 2,
+        'worker_num' => 1,
         'max_request' => 100000,
         'reactor_num' => 2,
         'open_length_check' => 1,

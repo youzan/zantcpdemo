@@ -13,9 +13,14 @@ return [
         'open_nova_protocol' => 1,
         'package_max_length' => 2000000
     ],
+//    'novaApi' => [
+//        'path'  => 'vendor/zanphp/novatcpdemo/gen-php',
+//        'namespace' => 'Com\\Youzan\\NovaTcpDemo\\',
+//    ],
+
     'novaApi' => [
-        'path'  => 'vendor/zanphp/novatcpdemo/gen-php',
-        'namespace' => 'Com\\Youzan\\NovaTcpDemo\\',
+        'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
+        'namespace' => 'Com\\Youzan\\Nova\\',
     ],
 
     'platform' => [

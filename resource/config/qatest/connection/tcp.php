@@ -22,7 +22,7 @@ return [
         ],
         'pool'  => [
             'keeping-sleep-time' => 10000,
-            'init-connection'=> 2,
+            'init-connection'=> 0,
         ],
     ],
 ];

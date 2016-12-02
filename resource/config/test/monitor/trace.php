@@ -7,5 +7,5 @@
  */
 
 return [
-    "run" => true,
+    "run" => false,
 ];

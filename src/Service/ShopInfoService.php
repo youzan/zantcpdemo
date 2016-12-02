@@ -10,7 +10,8 @@ namespace Com\Youzan\TcpDemo\Service;
 
 use Com\Youzan\Shop\Api\Info\Domain\Shop;
 
-class ShopInfoService implements \Com\Youzan\Shop\Api\Info\Interfaces\ShopInfoService{
+class ShopInfoService implements \Com\Youzan\Shop\Api\Info\Interfaces\ShopInfoService
+{
     public function selectByNo($userNo)
     {
         $domain = new Shop();

@@ -16,7 +16,9 @@
 return [
     'trace' => [
         'engine'=> 'tcp',
-        'host' => '10.9.37.103',
+//        'host' => '10.9.37.103',
+//        'host' => '127.0.0.1',
+        'host' => '10.9.25.74',
         'port' => '2280',
         'timeout' => 5000,
         'hasRecv' => false,
@@ -28,8 +30,10 @@ return [
             'open_nova_protocol' => 1
         ],
         'pool'  => [
-            'keeping-sleep-time' => 10000,
+            'maximum-connection-count' => 50,
+            'minimum-connection-count' => 2,
+            'heartbeat-time' => 35000,
             'init-connection'=> 2,
-        ],
+        ]
     ],
 ];
