@@ -24,6 +24,7 @@ class genericServiceFilter implements RequestFilter
 
                 // 两种方式获取 卡门透传参数
                 $kdtId = $context->get("kdt_id", -1);
+
                 $kdtId = intval(Arr::get($attachment, "kdt_id", -1));
                 if ($kdtId === 42) {
 

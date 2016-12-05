@@ -63,13 +63,15 @@
         "zanphp/novatcpdemo": "dev-dev",
         "zanphp/nova": "dev-dev",
         "nova-service/generic": "1.0.2",
-        "nova-service/generic-test": "dev-master"
+        "nova-service/generic-test": "dev-test/v2"
     },
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
             "Com\\Youzan\\TcpDemo\\Tests\\": "tests",
-            "Com\\Youzan\\TcpDemoInit\\": "init"
+            "Com\\Youzan\\TcpDemoInit\\": "init",
+            "Com\\Youzan\\Nova\\ThriftTest\\": "vendor/nova-service/generic-test/sdk/gen-php/ThriftTest"
+
         },
         "classmap": []
     },
