@@ -21,8 +21,10 @@ return [
             'open_nova_protocol' => 1
         ],
         'pool'  => [
-            'keeping-sleep-time' => 10000,
+            'maximum-connection-count' => 50,
+            'minimum-connection-count' => 0,
+            'heartbeat-time' => 35000,
             'init-connection'=> 0,
-        ],
+        ]
     ],
 ];

@@ -8,10 +8,10 @@
 
 return [
     'host'          => '0.0.0.0',
-    'port'          => '8020',
+    'port'          => '8050',
     'config' => [
         'daemonize' => 0,
-        'worker_num' => 1,
+        'worker_num' => 4,
         'max_request' => 100000,
         'reactor_num' => 2,
         'open_length_check' => 1,
@@ -22,7 +22,7 @@ return [
         'package_max_length' => 2000000
     ],
     'monitor' =>[
-        'max_request'   => 100000,            //
+        'max_request'   => 100000,
         'max_live_time' => 1800000,         //30m
         'check_interval'=> 10000,           //1s
         'memory_limit'  => 1.5 * 1024 * 1024 * 1024,       //1.50G
