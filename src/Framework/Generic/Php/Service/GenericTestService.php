@@ -88,9 +88,15 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
      */
     public function returnBaseStruct()
     {
-//        $args = func_get_args();
-//        yield $this->makeBaseStruct();
-        yield new BaseStruct();
+//        $hello = (yield getRpcContext("hello"));
+//        $ctx = (yield getRpcContext());
+
+//        $hello1 = (yield getContext("hello"));
+//        yield setRpcContext(__METHOD__, __CLASS__);
+
+        $args = func_get_args();
+        yield $this->makeBaseStruct();
+//        yield new BaseStruct();
     }
 
     /**
@@ -98,17 +104,17 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
      */
     public function returnMixedStruct()
     {
-//        $args = func_get_args();
-//        yield $this->makeMixedStruct();
+        $args = func_get_args();
+        yield $this->makeMixedStruct();
 
-        $ms = new MixedStruct();
-        $ms->baseStruct = new BaseStruct();
-        $ms->propString = __METHOD__;
-        $ms->propList = $this->makeBaseStructList();
-        $ms->propMap = $this->makeBaseStructMap();
-        $ms->propSet = $this->makeBaseStructSet();
-
-        yield $ms;
+//        $ms = new MixedStruct();
+//        $ms->baseStruct = new BaseStruct();
+//        $ms->propString = __METHOD__;
+//        $ms->propList = $this->makeBaseStructList();
+//        $ms->propMap = $this->makeBaseStructMap();
+//        $ms->propSet = $this->makeBaseStructSet();
+//
+//        yield $ms;
     }
 
     /**
@@ -187,22 +193,22 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
 
 
 
-        $ret = (yield setRpcContext("hello", "world"));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext("hello_job_server"));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext());
-        var_dump($ret);
-
-        $ret = (yield setRpcContext("hello", null));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext("hello"));
-        var_dump($ret);
-
-        yield setRpcContext("method", __METHOD__);
+//        $ret = (yield setRpcContext("hello", "world"));
+//        var_dump($ret);
+//
+//        $ret = (yield getRpcContext("hello_job_server"));
+//        var_dump($ret);
+//
+//        $ret = (yield getRpcContext());
+//        var_dump($ret);
+//
+//        $ret = (yield setRpcContext("hello", null));
+//        var_dump($ret);
+//
+//        $ret = (yield getRpcContext("hello"));
+//        var_dump($ret);
+//
+//        yield setRpcContext("method", __METHOD__);
 
         yield $map;
     }
