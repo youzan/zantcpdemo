@@ -88,9 +88,8 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
      */
     public function returnBaseStruct()
     {
-//        $args = func_get_args();
-//        yield $this->makeBaseStruct();
-        yield new BaseStruct();
+        $args = func_get_args();
+        yield $this->makeBaseStruct();
     }
 
     /**
@@ -98,17 +97,8 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
      */
     public function returnMixedStruct()
     {
-//        $args = func_get_args();
-//        yield $this->makeMixedStruct();
-
-        $ms = new MixedStruct();
-        $ms->baseStruct = new BaseStruct();
-        $ms->propString = __METHOD__;
-        $ms->propList = $this->makeBaseStructList();
-        $ms->propMap = $this->makeBaseStructMap();
-        $ms->propSet = $this->makeBaseStructSet();
-
-        yield $ms;
+        $args = func_get_args();
+        yield $this->makeMixedStruct();
     }
 
     /**
@@ -182,29 +172,9 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
     public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, BaseStruct $baseStruct, array $returnList,
                                   array $returnSet, array $returnMap = ["def"=>null], $errorLevel = -1)
     {
-        $map = $this->makeBaseStructMap();
-//        $ret["ret"] = get_defined_vars();
-
-
-
-        $ret = (yield setRpcContext("hello", "world"));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext("hello_job_server"));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext());
-        var_dump($ret);
-
-        $ret = (yield setRpcContext("hello", null));
-        var_dump($ret);
-
-        $ret = (yield getRpcContext("hello"));
-        var_dump($ret);
-
-        yield setRpcContext("method", __METHOD__);
-
-        yield $map;
+        $ret = $this->makeBaseStructMap();
+        $ret["ret"] = get_defined_vars();
+        yield $ret;
     }
 
     private function makeBaseStruct()

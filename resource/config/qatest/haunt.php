@@ -29,7 +29,7 @@ return [
     ],
     //服务注册配置 固定配置业务无需修改
     'register' => [
-        'host' => '127.0.0.1',
+        'host' => 'etcd0-qa.s.qima-inc.com',
         'port' => 8687,
         'uri' => '/register',
         'timeout' => 30000,

@@ -15,8 +15,8 @@ class genericServiceFilter implements RequestFilter
         if ($request instanceof \Zan\Framework\Network\Tcp\Request) {
             if ($request->isGenericInvoke()) {
                 $route = $request->getRoute();
-                $attachData = $request->getAttachData();
-                $attachment = $request->getGenericAttachment();
+                $rpcCtx = $request->getRpcContext();
+
 
 //                var_dump($route);
 //                var_dump($attachData);
@@ -25,7 +25,7 @@ class genericServiceFilter implements RequestFilter
                 // 两种方式获取 卡门透传参数
                 $kdtId = $context->get("kdt_id", -1);
 
-                $kdtId = intval(Arr::get($attachment, "kdt_id", -1));
+                $kdtId = $rpcCtx->get($kdtId, 0);
                 if ($kdtId === 42) {
 
                     // 抛出异常, 或者错误信息
