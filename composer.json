@@ -10,14 +10,16 @@
         "zanphp/zan": "dev-master",
         "zanphp/nova": "dev-dev",
         "nova-service/generic": "1.0.2",
-        "nova-service/generic-test": "dev-test/v2"
+        "nova-service/generic-test": "dev-master"
+
     },
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
             "Com\\Youzan\\TcpDemo\\Tests\\": "tests",
             "Com\\Youzan\\TcpDemoInit\\": "init",
-            "Com\\Youzan\\Nova\\ThriftTest\\": "vendor/nova-service/generic-test/sdk/gen-php/ThriftTest"
+            "Com\\Youzan\\Nova\\ThriftTest\\": "vendor/nova-service/generic-test/sdk/gen-php/ThriftTest",
+            "Com\\Youzan\\Ump\\Marketing\\": "vendor/nova-service/generic-test/sdk/gen-php/Marketing"
 
         },
         "classmap": []

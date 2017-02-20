@@ -8,7 +8,7 @@
 
 return [
     'host'          => '0.0.0.0',
-    'port'          => '8050',
+    'port'          => 8050,
     'config' => [
         'worker_num'    => 1,
         'dispatch_mode' => 3,
@@ -29,5 +29,5 @@ return [
         'cpu_limit'     => 70,
         'debug'         => false
     ],
-    'request_timeout' => 30000,
+    'request_timeout' => 60000,
 ];

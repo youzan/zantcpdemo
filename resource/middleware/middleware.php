@@ -13,6 +13,11 @@ class genericServiceFilter implements RequestFilter
     public function doFilter(\Zan\Framework\Contract\Network\Request $request, \Zan\Framework\Utilities\DesignPattern\Context $context)
     {
         if ($request instanceof \Zan\Framework\Network\Tcp\Request) {
+            $rpcCtx1 = (yield getRpcContext());
+
+            /* @var \Zan\Framework\Network\Tcp\RpcContext $rpcContext */
+            $rpcContext = $request->getRpcContext();
+
             if ($request->isGenericInvoke()) {
                 $route = $request->getRoute();
                 $rpcCtx = $request->getRpcContext();
@@ -51,9 +56,15 @@ return [
         [
             "/Com/Youzan/Nova/Framework/Generic/Php/Service/GenericTestService/ThrowException", "genericServiceFilterGroup",
         ],
+        [
+            ".*", "all"
+        ]
     ],
     'group' => [
         "genericServiceFilterGroup" => [
+            genericServiceFilter::class
+        ],
+        "all" => [
             genericServiceFilter::class
         ],
     ]

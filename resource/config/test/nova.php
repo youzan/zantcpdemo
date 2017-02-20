@@ -20,10 +20,16 @@ return [
 //        'namespace' => 'Com\\Youzan\\NovaTcpDemo\\',
 //    ],
 
-    // 发布测试服务
+    // 测试泛化
+//    'novaApi' => [
+//        'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
+//        'namespace' => 'Com\\Youzan\\Nova\\',
+//    ],
+
+    // 测试 MeetReduceService
     'novaApi' => [
         'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
-        'namespace' => 'Com\\Youzan\\Nova\\',
+        'namespace' => 'Com\\Youzan\\Ump\\',
     ],
 
     'platform' => [
