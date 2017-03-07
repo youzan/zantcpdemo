@@ -8,7 +8,7 @@
 
 return [
     'host'          => '0.0.0.0',
-    'port'          => 8050,
+    'port'          => 8051,
     'config' => [
         'worker_num'    => 1,
         'dispatch_mode' => 3,

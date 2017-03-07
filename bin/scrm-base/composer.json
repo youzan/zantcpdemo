@@ -1,0 +1,22 @@
+{
+    "name": "nova-service/scrm-base-test",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@gitlab.qima-inc.com:php-3rd-lib/packaged-thrift.git"
+        },
+        {
+            "packagist": false
+        }
+    ],
+    "require": {
+        "packaged/thrift": "0.9.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Com\\Youzan\\Scrm\\": "gen-php"
+        },
+        "classmap": []
+    }
+
+}

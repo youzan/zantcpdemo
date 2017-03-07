@@ -1,12 +1,12 @@
+#!/usr/bin/env php
 <?php
 
 use Zan\Framework\Foundation\Application;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$appName = 'tcp-demo';
+$appName = "scrm-base";
 $rootPath = realpath(__DIR__.'/../');
-
 $app = new Application($appName, $rootPath);
-
-return $app;
+$server = $app->createTcpServer();
+$server->start();
