@@ -11,7 +11,7 @@ return [
 //    ],
 
     'app_names' => [
-        'servx-app',
+     //   'servx-app',
 //        'servy-app'
     ],
 

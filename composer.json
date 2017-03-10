@@ -8,7 +8,7 @@
     },
     "require": {
         "zanphp/zan": "dev-master",
-        "zanphp/nova": "dev-dev",
+        "zanphp/nova": "dev-master",
         "nova-service/scrm": "1.3.6",
         "nova-service/pf": "dev-master",
         "nova-service/generic": "1.0.2",
