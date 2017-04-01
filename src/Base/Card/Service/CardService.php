@@ -9,6 +9,8 @@ class CardService implements \Com\Youzan\Scrm\Base\Card\Interfaces\CardService
      */
     public function getCard()
     {
-        return "hello card";
+        $args = func_get_args();
+        $str = str_repeat('a', rand(0, 65536));
+        yield $str;
     }
 }
