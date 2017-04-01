@@ -71,7 +71,8 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
     public function returnString()
     {
         $args = func_get_args();
-        yield __METHOD__;
+	$str = str_repeat('a', rand(0, 65536));
+        yield $str;
     }
 
     /**

@@ -7,7 +7,7 @@
  */
 
 return [
-    'default' => [
+    /*'default' => [
         'engine'=> 'KvStore',
         //ip列表，将会对每一个建立链接
         'ip_list' => [
@@ -22,5 +22,5 @@ return [
             'keeping-sleep-time' => 10000,
             'init-connection'=> 0,
         ],
-    ],
+    ],*/
 ];

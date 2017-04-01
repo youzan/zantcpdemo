@@ -50,9 +50,9 @@ return [
     ],
     //服务注册配置 固定配置业务无需修改
     'register' => [
-        'host' => '127.0.0.1',
+//        'host' => '127.0.0.1',
 //        'host' => '172.17.8.113',
-//        'host' => 'etcd-dev.s.qima-inc.com',
+        'host' => 'etcd-dev.s.qima-inc.com',
         'port' => 8687,
 
         'uri' => '/register',
@@ -61,8 +61,8 @@ return [
     ],
     //服务注册配置 固定配置业务无需修改
     'unregister' => [
-        'host' => '127.0.0.1',
-//        'host' => 'etcd-dev.s.qima-inc.com',
+//        'host' => '127.0.0.1',
+        'host' => 'etcd-dev.s.qima-inc.com',
         'port' => 8687,
         'uri' => '/unregister',
         'timeout' => 30000,

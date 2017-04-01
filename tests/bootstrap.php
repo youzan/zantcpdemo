@@ -14,7 +14,7 @@
 
 
 $home = getenv('HOME');
-require $home . "/.composer/vendor/autoload.php";
+//require $home . "/.composer/vendor/autoload.php";
 
 require __DIR__.'/../vendor/autoload.php';
 

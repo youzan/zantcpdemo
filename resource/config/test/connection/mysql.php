@@ -12,6 +12,10 @@ return [
         'user' => 'pifa',
         'password' => 'pifa',
         'database' => 'pifa',
+        /*'host' => '127.0.0.1',
+        'user' => 'root',
+        'password' => 'marsnow',
+        'database' => 'test',*/
         'port' => '3306',
         'pool'  => [
             'maximum-connection-count' => 50,
