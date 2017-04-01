@@ -26,7 +26,8 @@ return [
         //'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
         //'namespae' => 'Com\\Youzan\\Nova\\',
         'path'  => 'vendor/nova-service/scrm-base/gen-php',
-        'namespace' => 'Com\\Youzan\\Scrm\\'
+        'namespace' => 'Com\\Youzan\\Scrm\\',
+        'domain' => 'com.youzan.tcpdemo.service'
     ],
 
     'platform' => [
