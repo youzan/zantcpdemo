@@ -23,8 +23,10 @@ return [
 
     // 发布测试服务
     'novaApi' => [
-        'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
-        'namespace' => 'Com\\Youzan\\Nova\\',
+        //'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
+        //'namespae' => 'Com\\Youzan\\Nova\\',
+        'path'  => 'vendor/nova-service/scrm-base/gen-php',
+        'namespace' => 'Com\\Youzan\\Scrm\\'
     ],
 
     'platform' => [
