@@ -72,7 +72,8 @@ class GenericTestService implements \Com\Youzan\Nova\Framework\Generic\Php\Inter
     {
 	    $str = str_repeat('a', rand(0, 65536));
         $checksum = md5($str);
-        yield $str.":".$checksum;
+        $length = count($str);
+        yield $str.":".$length.":".$checksum;
     }
 
     /**
