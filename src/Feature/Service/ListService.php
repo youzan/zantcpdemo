@@ -9,6 +9,8 @@
 namespace Com\Youzan\TcpDemo\Feature\Service;
 
 
+use Com\Youzan\Pf\Feature\Exception\ListException;
+
 class ListService implements \Com\Youzan\Pf\Feature\Interfaces\ListService
 {
     /**
@@ -91,6 +93,7 @@ class ListService implements \Com\Youzan\Pf\Feature\Interfaces\ListService
     public function deleteItem($labelId, $itemId, $itemType)
     {
         // TODO: Implement deleteItem() method.
+        yield $labelId + $itemId + $itemType;
     }
 
     /**
@@ -102,6 +105,7 @@ class ListService implements \Com\Youzan\Pf\Feature\Interfaces\ListService
     public function countItems($labelId, $type)
     {
         // TODO: Implement countItems() method.
+        yield ["labelId" => $labelId, "type" => $type];
     }
 
     /**
@@ -112,5 +116,6 @@ class ListService implements \Com\Youzan\Pf\Feature\Interfaces\ListService
     public function getGoodsSet($venuesId)
     {
         // TODO: Implement getGoodsSet() method.
+        throw new ListException("getGoodsSet Exception: $venuesId");
     }
 }
