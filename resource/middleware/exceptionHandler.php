@@ -17,7 +17,7 @@ class GenericExceptionHandler implements ExceptionHandler
     }
 }
 
-//return [
+return [
 //    'match' => [
 //        [
 //            ".*", "all"
@@ -31,4 +31,4 @@ class GenericExceptionHandler implements ExceptionHandler
 //            GenericExceptionHandler::class
 //        ],
 //    ],
-//];
+];

@@ -46,7 +46,7 @@ class genericServiceFilter implements RequestFilter
 
 }
 
-//return [
+return [
 //    'match' => [
 //        // 可以单独针对 所有泛化调用 设置过滤器
 //        [
@@ -68,5 +68,5 @@ class genericServiceFilter implements RequestFilter
 //            genericServiceFilter::class
 //        ],
 //    ]
-//];
+];
 
