@@ -46,27 +46,27 @@ class genericServiceFilter implements RequestFilter
 
 }
 
-return [
-    'match' => [
-        // 可以单独针对 所有泛化调用 设置过滤器
-        [
-            "/com/youzan/nova/framework/generic/service/GenericService/invoke", "genericServiceFilterGroup",
-        ],
-        // 也可以直接 针对特定服务配置, 在过滤器内检测是否是泛化调用
-        [
-            "/Com/Youzan/Nova/Framework/Generic/Php/Service/GenericTestService/ThrowException", "genericServiceFilterGroup",
-        ],
-        [
-            ".*", "all"
-        ]
-    ],
-    'group' => [
-        "genericServiceFilterGroup" => [
-            genericServiceFilter::class
-        ],
-        "all" => [
-            genericServiceFilter::class
-        ],
-    ]
-];
+//return [
+//    'match' => [
+//        // 可以单独针对 所有泛化调用 设置过滤器
+//        [
+//            "/com/youzan/nova/framework/generic/service/GenericService/invoke", "genericServiceFilterGroup",
+//        ],
+//        // 也可以直接 针对特定服务配置, 在过滤器内检测是否是泛化调用
+//        [
+//            "/Com/Youzan/Nova/Framework/Generic/Php/Service/GenericTestService/ThrowException", "genericServiceFilterGroup",
+//        ],
+//        [
+//            ".*", "all"
+//        ]
+//    ],
+//    'group' => [
+//        "genericServiceFilterGroup" => [
+//            genericServiceFilter::class
+//        ],
+//        "all" => [
+//            genericServiceFilter::class
+//        ],
+//    ]
+//];
 
