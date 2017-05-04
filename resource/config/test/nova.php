@@ -37,16 +37,16 @@ return [
 
 
 
-    'novaApi' => [
-        [
-//            'path'  => 'vendor/zanphp/novatcpdemo/gen-php',
-//          'namespace' => 'Com\\Youzan\\NovaTcpDemo\\',
-//            'path'  => 'vendor/nova-service/scrm/gen-php',
-//            'namespace' => 'Com\\Youzan\\Scrm\\',
-                'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
-                'namespace' => 'Com\\Youzan\\Nova\\',
-        ]
-    ],
+//    'novaApi' => [
+//        [
+////            'path'  => 'vendor/zanphp/novatcpdemo/gen-php',
+////          'namespace' => 'Com\\Youzan\\NovaTcpDemo\\',
+////            'path'  => 'vendor/nova-service/scrm/gen-php',
+////            'namespace' => 'Com\\Youzan\\Scrm\\',
+//                'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
+//                'namespace' => 'Com\\Youzan\\Nova\\',
+//        ]
+//    ],
 
 //    [
 //        'domain' => 'com.youzan.test',
