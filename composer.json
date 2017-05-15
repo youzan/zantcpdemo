@@ -9,24 +9,15 @@
     "require": {
         "zanphp/zan": "dev-master",
         "zanphp/nova": "dev-master",
-        "nova-service/scrm": "1.3.6",
-        "nova-service/pf": "dev-master",
         "nova-service/generic": "1.0.2",
         "nova-service/generic-test": "dev-master",
-        "nova-service/servx": "dev-master",
-        "nova-service/servy": "dev-master",
-        "nova-service/scrm-core": "dev-master",
-        "nova-service/scrm-base": "dev-master"
+        "nova-service/nova-demo": "dev-master"
     },
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
             "Com\\Youzan\\TcpDemo\\Tests\\": "tests",
-            "Com\\Youzan\\TcpDemoInit\\": "init",
-            "Com\\Youzan\\Nova\\ThriftTest\\": "vendor/nova-service/generic-test/sdk/gen-php/ThriftTest",
-            "Com\\Youzan\\Ump\\Marketing\\": "vendor/nova-service/generic-test/sdk/gen-php/Marketing",
-            "Com\\Youzan\\Servx\\": "vendor/nova-service/servx/gen-php",
-            "Com\\Youzan\\Servy\\": "vendor/nova-service/servy/gen-php"
+            "Com\\Youzan\\TcpDemoInit\\": "init"
         },
         "classmap": []
     },
