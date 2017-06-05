@@ -15,7 +15,7 @@ zan.DEBUG = true
 5. 启动tcp server
 `php bin/nova`
 
-# 如何提供nova服务供http-demo调用
+# 如何提供nova服务供[http-demo](https://github.com/youzan/zanhttpdemo)调用
 
 详情参见 [**NOVA示例教程**](http://zanphpdoc.zanphp.io/nova/nova_service.html)
 
