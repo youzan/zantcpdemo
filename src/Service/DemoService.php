@@ -89,7 +89,7 @@ class DemoService implements \Com\Yourcompany\Demo\Interfaces\DemoService
         $base->propI64 = 1000;
         $base->propDouble = 1000.0;
         $base->propString = "BaseStruct";
-        yield $base;
+        return $base;
     }
 
     /**
