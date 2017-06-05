@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: marsnowxiao
- * Date: 2017/5/15
- * Time: 下午5:29
- */
 
 namespace Com\Youzan\TcpDemo\Service;
 
@@ -16,7 +10,6 @@ use Com\Youzan\Demo\Service\MixedStruct;
 
 class DemoService implements BaseService
 {
-
     /**
      * @return string
      */
@@ -48,7 +41,7 @@ class DemoService implements BaseService
      */
     public function returnBool()
     {
-        return true;
+        yield true;
     }
 
     /**
@@ -56,7 +49,7 @@ class DemoService implements BaseService
      */
     public function returnI32()
     {
-        return rand() % 1024;
+        yield rand() % 1024;
     }
 
     /**
@@ -64,7 +57,7 @@ class DemoService implements BaseService
      */
     public function returnDouble()
     {
-        return rand(1, 100) / (double)100;
+        yield rand(1, 100) / (double)100;
     }
 
     /**
@@ -72,7 +65,7 @@ class DemoService implements BaseService
      */
     public function returnString()
     {
-        return str_repeat('a', rand(1, 20));
+        yield str_repeat('a', rand(1, 20));
     }
 
     /**
@@ -80,7 +73,7 @@ class DemoService implements BaseService
      */
     public function returnEnum()
     {
-        return ErrorLevel::INFO;
+        yield ErrorLevel::INFO;
     }
 
     /**
@@ -104,7 +97,7 @@ class DemoService implements BaseService
      */
     public function returnBaseStruct()
     {
-        return $this->makeBaseStruct();
+        yield $this->makeBaseStruct();
     }
 
     /**
@@ -112,7 +105,6 @@ class DemoService implements BaseService
      */
     public function returnMixedStruct()
     {
-        // TODO: Implement returnMixedStruct() method.
         $base = $this->makeBaseStruct();
         $mixed = new MixedStruct();
         $mixed->baseStruct = $base;
@@ -121,7 +113,7 @@ class DemoService implements BaseService
         $mixed->propSet = [$base];
         $mixed->propMap = ["returnMixedStruct" => $base];
 
-        return $mixed;
+        yield $mixed;
     }
 
     /**
@@ -129,7 +121,7 @@ class DemoService implements BaseService
      */
     public function returnList()
     {
-        return [$this->makeBaseStruct()];
+        yield [$this->makeBaseStruct()];
     }
 
     /**
@@ -137,7 +129,7 @@ class DemoService implements BaseService
      */
     public function returnSet()
     {
-        return [$this->makeBaseStruct()];
+        yield [$this->makeBaseStruct()];
     }
 
     /**
@@ -145,7 +137,7 @@ class DemoService implements BaseService
      */
     public function returnMap()
     {
-        return ["returnMap" => $this->makeBaseStruct()];
+        yield ["returnMap" => $this->makeBaseStruct()];
     }
 
     /**
@@ -187,6 +179,6 @@ class DemoService implements BaseService
      */
     public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
     {
-        return func_get_args();
+        yield func_get_args();
     }
 }

@@ -1,27 +1,18 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: heize
- * Date: 16/4/5
- * Time: 下午4:53
- */
+
 return [
     'default_write' => [
         'engine'=> 'mysqli',
-        'host' => '10.9.34.172',
-        'user' => 'pifa',
-        'password' => 'pifa',
-        'database' => 'pifa',
-        /*'host' => '127.0.0.1',
+        'host' => '127.0.0.1',
         'user' => 'root',
-        'password' => 'marsnow',
-        'database' => 'test',*/
-        'port' => '3306',
+        'password' => '123456',
+        'database' => 'information_schema',
+        'port' => 3306,
         'pool'  => [
             'maximum-connection-count' => 50,
-            'minimum-connection-count' => 0,
-            'heartbeat-time' => 35000,
-            'init-connection'=> 0,
+            'minimum-connection-count' => 5,
+            'heartbeat-time' => 5000,
+            'init-connection'=> 5,
         ],
     ],
 

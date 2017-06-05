@@ -1,8 +1,9 @@
 <?php
 
 return [
-    'novaApi' => [
-        'path'  => 'vendor/nova-service/generic-test/sdk/gen-php',
-        'namespace' => 'Com\\Youzan\\Nova\\',
+    // 发布服务
+    "novaApi" => [
+        "path" => "vendor/nova-service/nova-demo/sdk/gen-php",
+        "namespace" => "Com\\Youzan\\Demo\\",
     ],
 ];

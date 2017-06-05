@@ -1,7 +1,6 @@
 <?php
 
 use Zan\Framework\Contract\Network\RequestFilter;
-use Zan\Framework\Utilities\Types\Arr;
 
 class genericServiceFilter implements RequestFilter
 {
@@ -22,23 +21,16 @@ class genericServiceFilter implements RequestFilter
                 $route = $request->getRoute();
                 $rpcCtx = $request->getRpcContext();
 
-
-//                var_dump($route);
-//                var_dump($attachData);
-//                var_dump($attachment);
-
-                // 两种方式获取 卡门透传参数
                 $kdtId = $context->get("kdt_id", -1);
-
+                // or
                 $kdtId = $rpcCtx->get($kdtId, 0);
                 if ($kdtId === 42) {
-
                     // 抛出异常, 或者错误信息
 //                    throw new \RuntimeException("invalid kdtid", 500);
-
 //                    yield "invalid kdtId";
 //                    return;
                 }
+
             }
         }
         yield null;

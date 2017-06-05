@@ -1,36 +1,29 @@
 {
     "name": "zanphp/tcpdemo",
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "http://packagist.qima-inc.com"
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:youzan/zanphp.git"
+        },
+        {
+            "type": "path",
+            "url": "nova-sdk/nova-demo"
         }
-    },
+    ],
     "require": {
-        "zanphp/zan": "dev-master",
-        "zanphp/nova": "dev-master",
-        "nova-service/generic": "1.0.2",
-        "nova-service/generic-test": "dev-master",
-        "nova-service/nova-demo": "dev-master"
+        "zanphp/zan": "2.x-dev",
+        "nova-service/nova-demo": "*"
     },
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
-            "Com\\Youzan\\TcpDemo\\Tests\\": "tests",
             "Com\\Youzan\\TcpDemoInit\\": "init"
-        },
-        "classmap": []
+        }
     },
-    "autoload-dev": {
-        "classmap": [
-        ]
-    },
-    "require-dev": {
-    },
-    "prefer-stable": false,
     "config": {
         "preferred-install": "dist",
         "secure-http": false
     },
+    "prefer-stable": false,
     "minimum-stability": "dev"
 }
