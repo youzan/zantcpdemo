@@ -17,6 +17,8 @@ zan.DEBUG = true
 
 # 如何提供nova服务供http-demo调用
 
+详情参见 [**NOVA示例教程**](http://zanphpdoc.zanphp.io/nova/nova_service.html)
+
 1. 编写nova服务thrift文件
 2. 生成nova存根代码, 发布到仓库
 3. tcp(nova服务端)项目 与 http(nova客户端)项目 composer.json 分别添加 nova存根代码 依赖

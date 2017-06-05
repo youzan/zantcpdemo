@@ -10,16 +10,6 @@ use Com\Yourcompany\Demo\Exception\DemoServiceException;
 
 class DemoService implements \Com\Yourcompany\Demo\Interfaces\DemoService
 {
-    /**
-     * @return string
-     */
-    public function getCard()
-    {
-        $str = str_repeat('a', rand(0, 65536));
-        $checksum = md5($str);
-        $length = strlen($str);
-        yield $str . ":" . $length . ":" . $checksum;
-    }
 
     /**
      * @throws DemoServiceException
@@ -76,9 +66,6 @@ class DemoService implements \Com\Yourcompany\Demo\Interfaces\DemoService
         yield ErrorLevel::INFO;
     }
 
-    /**
-     * @return \Generator
-     */
     private function makeBaseStruct()
     {
         $base = new BaseStruct();
