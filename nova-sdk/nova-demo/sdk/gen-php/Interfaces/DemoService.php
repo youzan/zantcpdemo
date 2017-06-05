@@ -8,11 +8,11 @@
  * @generated
  */
 
-namespace Com\Youzan\Demo\Interfaces;
+namespace Com\Yourcompany\Demo\Interfaces;
 
 interface DemoService {
   /**
-   * @throws \Com\Youzan\Demo\Service\DemoServiceException
+   * @throws \Com\Yourcompany\Demo\Exception\DemoServiceException
    */
   public function throwException();
   /**
@@ -39,19 +39,19 @@ interface DemoService {
    */
   public function returnEnum();
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct
    */
   public function returnBaseStruct();
   /**
-   * @return \Com\Youzan\Demo\Service\MixedStruct
+   * @return \Com\Yourcompany\Demo\Entity\MixedStruct
    */
   public function returnMixedStruct();
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct[]
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public function returnList();
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct[]
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public function returnSet();
   /**
@@ -68,25 +68,25 @@ interface DemoService {
    * @param int $paraI32
    * @param double $paraDouble
    * @param string $paraString
-   * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnList
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnSet
    * @param array $returnMap
    * @param int $errorLevel
    */
-  public function paraMixedNoReturn($paraBool, $paraI32, $paraDouble, $paraString, \Com\Youzan\Demo\Service\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel);
+  public function paraMixedNoReturn($paraBool, $paraI32, $paraDouble, $paraString, \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel);
   /**
    * @param bool $paraBool
    * @param int $paraI32
    * @param double $paraDouble
    * @param string $paraString
-   * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnList
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnSet
    * @param array $returnMap
    * @param int $errorLevel
    * @return array
    */
-  public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, \Com\Youzan\Demo\Service\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel);
+  public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel);
 }
 

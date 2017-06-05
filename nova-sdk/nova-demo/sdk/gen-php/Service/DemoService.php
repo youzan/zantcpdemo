@@ -8,14 +8,14 @@
  * @generated
  */
 
-namespace Com\Youzan\Demo\Service;
+namespace Com\Yourcompany\Demo\Service;
 
 use Kdt\Iron\Nova\Foundation\TService;
 use Thrift\Type\TType;
 
 
-use Com\Youzan\Demo\Interfaces\DemoService as DemoServiceInterface;
-use Com\Youzan\Demo\Servicespecification\DemoService as DemoServiceSpecification;
+use Com\Yourcompany\Demo\Interfaces\DemoService as DemoServiceInterface;
+use Com\Yourcompany\Demo\Servicespecification\DemoService as DemoServiceSpecification;
 
 class DemoService extends TService implements DemoServiceInterface {
 
@@ -25,7 +25,7 @@ class DemoService extends TService implements DemoServiceInterface {
   }
 
   /**
-   * @throws \Com\Youzan\Demo\Service\DemoServiceException
+   * @throws \Com\Yourcompany\Demo\Exception\DemoServiceException
    */
   public function throwException()
   {
@@ -80,7 +80,7 @@ class DemoService extends TService implements DemoServiceInterface {
   }
 
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct
    */
   public function returnBaseStruct()
   {
@@ -88,7 +88,7 @@ class DemoService extends TService implements DemoServiceInterface {
   }
 
   /**
-   * @return \Com\Youzan\Demo\Service\MixedStruct
+   * @return \Com\Yourcompany\Demo\Entity\MixedStruct
    */
   public function returnMixedStruct()
   {
@@ -96,7 +96,7 @@ class DemoService extends TService implements DemoServiceInterface {
   }
 
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct[]
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public function returnList()
   {
@@ -104,7 +104,7 @@ class DemoService extends TService implements DemoServiceInterface {
   }
 
   /**
-   * @return \Com\Youzan\Demo\Service\BaseStruct[]
+   * @return \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public function returnSet()
   {
@@ -133,13 +133,13 @@ class DemoService extends TService implements DemoServiceInterface {
    * @param int $paraI32
    * @param double $paraDouble
    * @param string $paraString
-   * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnList
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnSet
    * @param array $returnMap
    * @param int $errorLevel
    */
-  public function paraMixedNoReturn($paraBool, $paraI32, $paraDouble, $paraString, \Com\Youzan\Demo\Service\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
+  public function paraMixedNoReturn($paraBool, $paraI32, $paraDouble, $paraString, \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
   {
     return $this->apiCall(__FUNCTION__, func_get_args());
   }
@@ -149,14 +149,14 @@ class DemoService extends TService implements DemoServiceInterface {
    * @param int $paraI32
    * @param double $paraDouble
    * @param string $paraString
-   * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-   * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnList
+   * @param \Com\Yourcompany\Demo\Entity\BaseStruct[] $returnSet
    * @param array $returnMap
    * @param int $errorLevel
    * @return array
    */
-  public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, \Com\Youzan\Demo\Service\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
+  public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, \Com\Yourcompany\Demo\Entity\BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
   {
     return $this->apiCall(__FUNCTION__, func_get_args());
   }

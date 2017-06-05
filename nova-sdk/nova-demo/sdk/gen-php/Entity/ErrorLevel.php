@@ -8,7 +8,7 @@
  * @generated
  */
 
-namespace Com\Youzan\Demo\Service;
+namespace Com\Yourcompany\Demo\Entity;
 
 use Kdt\Iron\Nova\Foundation\Protocol\TStruct;
 use Thrift\Type\TType;

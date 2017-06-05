@@ -4,6 +4,6 @@ return [
     // 发布服务
     "novaApi" => [
         "path" => "vendor/nova-service/nova-demo/sdk/gen-php",
-        "namespace" => "Com\\Youzan\\Demo\\",
+        "namespace" => "Com\\Yourcompany\\Demo\\",
     ],
 ];

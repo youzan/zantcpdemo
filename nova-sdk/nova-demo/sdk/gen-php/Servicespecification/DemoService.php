@@ -8,7 +8,7 @@
  * @generated
  */
 
-namespace Com\Youzan\Demo\Servicespecification;
+namespace Com\Yourcompany\Demo\Servicespecification;
 
 use Kdt\Iron\Nova\Foundation\TSpecification;
 use Thrift\Type\TType;
@@ -16,7 +16,7 @@ use Thrift\Type\TType;
 
 class DemoService extends TSpecification {
 
-  protected $serviceName = 'Com.Youzan.Demo.Service.DemoService';
+  protected $serviceName = 'Com.Yourcompany.Demo.Service.DemoService';
 
   protected $inputStructSpec = [
     'throwException' => [
@@ -73,7 +73,7 @@ class DemoService extends TSpecification {
       5 => [
         'var' => 'baseStruct',
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
       6 => [
         'var' => 'returnList',
@@ -81,7 +81,7 @@ class DemoService extends TSpecification {
         'etype' => TType::STRUCT,
         'elem' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       7 => [
@@ -90,7 +90,7 @@ class DemoService extends TSpecification {
         'etype' => TType::STRUCT,
         'elem' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       8 => [
@@ -103,7 +103,7 @@ class DemoService extends TSpecification {
         ],
         'val' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       9 => [
@@ -131,7 +131,7 @@ class DemoService extends TSpecification {
       5 => [
         'var' => 'baseStruct',
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
       6 => [
         'var' => 'returnList',
@@ -139,7 +139,7 @@ class DemoService extends TSpecification {
         'etype' => TType::STRUCT,
         'elem' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       7 => [
@@ -148,7 +148,7 @@ class DemoService extends TSpecification {
         'etype' => TType::STRUCT,
         'elem' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       8 => [
@@ -161,7 +161,7 @@ class DemoService extends TSpecification {
         ],
         'val' => [
           'type' => TType::STRUCT,
-          'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+          'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
           ],
         ],
       9 => [
@@ -195,18 +195,18 @@ class DemoService extends TSpecification {
     ],
     'returnBaseStruct' => [
       'type' => TType::STRUCT,
-      'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+      'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
     ],
     'returnMixedStruct' => [
       'type' => TType::STRUCT,
-      'class' => '\Com\Youzan\Demo\Service\MixedStruct',
+      'class' => '\Com\Yourcompany\Demo\Entity\MixedStruct',
     ],
     'returnList' => [
       'type' => TType::LST,
       'etype' => TType::STRUCT,
       'elem' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
     ],
     'returnSet' => [
@@ -214,7 +214,7 @@ class DemoService extends TSpecification {
       'etype' => TType::STRUCT,
       'elem' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
     ],
     'returnMap' => [
@@ -226,7 +226,7 @@ class DemoService extends TSpecification {
       ],
       'val' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
     ],
     'paraBaseNoReturn' => [
@@ -244,7 +244,7 @@ class DemoService extends TSpecification {
       ],
       'val' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
     ],
   ];
@@ -254,7 +254,7 @@ class DemoService extends TSpecification {
       1 => [
         'var' => 'e',
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\DemoServiceException',
+        'class' => '\Com\Yourcompany\Demo\Exception\DemoServiceException',
         ],
     ],
   ];

@@ -8,7 +8,7 @@
  * @generated
  */
 
-namespace Com\Youzan\Demo\Service;
+namespace Com\Yourcompany\Demo\Entity;
 
 use Kdt\Iron\Nova\Foundation\Protocol\TStruct;
 use Thrift\Type\TType;
@@ -20,15 +20,15 @@ class MixedStruct extends TStruct {
    */
   public $propString = null;
   /**
-   * @var \Com\Youzan\Demo\Service\BaseStruct
+   * @var \Com\Yourcompany\Demo\Entity\BaseStruct
    */
   public $baseStruct = null;
   /**
-   * @var \Com\Youzan\Demo\Service\BaseStruct[]
+   * @var \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public $propList = null;
   /**
-   * @var \Com\Youzan\Demo\Service\BaseStruct[]
+   * @var \Com\Yourcompany\Demo\Entity\BaseStruct[]
    */
   public $propSet = null;
   /**
@@ -44,7 +44,7 @@ class MixedStruct extends TStruct {
     2 => [
       'var' => 'baseStruct',
       'type' => TType::STRUCT,
-      'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+      'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
       ],
     3 => [
       'var' => 'propList',
@@ -52,7 +52,7 @@ class MixedStruct extends TStruct {
       'etype' => TType::STRUCT,
       'elem' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
       ],
     4 => [
@@ -61,7 +61,7 @@ class MixedStruct extends TStruct {
       'etype' => TType::STRUCT,
       'elem' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
       ],
     5 => [
@@ -74,7 +74,7 @@ class MixedStruct extends TStruct {
       ],
       'val' => [
         'type' => TType::STRUCT,
-        'class' => '\Com\Youzan\Demo\Service\BaseStruct',
+        'class' => '\Com\Yourcompany\Demo\Entity\BaseStruct',
         ],
       ],
     ];

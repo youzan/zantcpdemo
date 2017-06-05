@@ -2,13 +2,13 @@
 
 namespace Com\Youzan\TcpDemo\Service;
 
-use Com\Youzan\Demo\Service\BaseStruct;
-use Com\Youzan\Demo\Service\DemoServiceException;
-use Com\Youzan\Demo\Service\ErrorLevel;
-use Com\Youzan\Demo\Interfaces\DemoService as BaseService;
-use Com\Youzan\Demo\Service\MixedStruct;
 
-class DemoService implements BaseService
+use Com\Yourcompany\Demo\Entity\BaseStruct;
+use Com\Yourcompany\Demo\Entity\ErrorLevel;
+use Com\Yourcompany\Demo\Entity\MixedStruct;
+use Com\Yourcompany\Demo\Exception\DemoServiceException;
+
+class DemoService implements \Com\Yourcompany\Demo\Interfaces\DemoService
 {
     /**
      * @return string
@@ -22,7 +22,7 @@ class DemoService implements BaseService
     }
 
     /**
-     * @throws \Com\Youzan\Demo\Service\DemoServiceException
+     * @throws DemoServiceException
      */
     public function throwException()
     {
@@ -77,7 +77,7 @@ class DemoService implements BaseService
     }
 
     /**
-     * @return \Com\Youzan\Demo\Service\BaseStruct
+     * @return \Generator
      */
     private function makeBaseStruct()
     {
@@ -89,11 +89,11 @@ class DemoService implements BaseService
         $base->propI64 = 1000;
         $base->propDouble = 1000.0;
         $base->propString = "BaseStruct";
-        return $base;
+        yield $base;
     }
 
     /**
-     * @return \Com\Youzan\Demo\Service\BaseStruct
+     * @return BaseStruct
      */
     public function returnBaseStruct()
     {
@@ -101,7 +101,7 @@ class DemoService implements BaseService
     }
 
     /**
-     * @return \Com\Youzan\Demo\Service\MixedStruct
+     * @return MixedStruct
      */
     public function returnMixedStruct()
     {
@@ -117,7 +117,7 @@ class DemoService implements BaseService
     }
 
     /**
-     * @return \Com\Youzan\Demo\Service\BaseStruct[]
+     * @return BaseStruct[]
      */
     public function returnList()
     {
@@ -125,7 +125,7 @@ class DemoService implements BaseService
     }
 
     /**
-     * @return \Com\Youzan\Demo\Service\BaseStruct[]
+     * @return BaseStruct[]
      */
     public function returnSet()
     {
@@ -154,9 +154,9 @@ class DemoService implements BaseService
      * @param int $paraI32
      * @param double $paraDouble
      * @param string $paraString
-     * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-     * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-     * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+     * @param BaseStruct $baseStruct
+     * @param BaseStruct[] $returnList
+     * @param BaseStruct[] $returnSet
      * @param array $returnMap
      * @param int $errorLevel
      */
@@ -170,9 +170,9 @@ class DemoService implements BaseService
      * @param int $paraI32
      * @param double $paraDouble
      * @param string $paraString
-     * @param \Com\Youzan\Demo\Service\BaseStruct $baseStruct
-     * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnList
-     * @param \Com\Youzan\Demo\Service\BaseStruct[] $returnSet
+     * @param BaseStruct $baseStruct
+     * @param BaseStruct[] $returnList
+     * @param BaseStruct[] $returnSet
      * @param array $returnMap
      * @param int $errorLevel
      * @return array
