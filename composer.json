@@ -20,7 +20,7 @@
     "autoload": {
         "psr-4": {
             "Com\\Youzan\\TcpDemo\\": "src",
-            "Com\\Youzan\\TcpDemoInit\\": "init"
+            "Com\\Youzan\\TcpDemo\\Init\\": "init"
         }
     },
     "config": {
