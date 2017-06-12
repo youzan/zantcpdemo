@@ -166,6 +166,6 @@ class DemoService implements \Com\Yourcompany\Demo\Interfaces\DemoService
      */
     public function complexMethod($paraBool, $paraI32, $paraDouble, $paraString, BaseStruct $baseStruct, array $returnList, array $returnSet, array $returnMap, $errorLevel)
     {
-        yield func_get_args();
+        yield get_defined_vars();
     }
 }
